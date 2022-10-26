@@ -1,0 +1,9 @@
+flask
+flask-sqlalchemy
+SQLAlchemy==1.3.23
+flask-socketio
+gevent
+gevent-websocket
+eventlet
+flask-migrate
+gunicorn
