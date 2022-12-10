@@ -5,7 +5,9 @@ class User(db.Model):
     lastName = db.Column(db.String(50), unique=False, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(192), unique=False, nullable=False)
-    address = db.Column(db.String(100), unique=False, nullable=False)
+    address = db.Column(db.String(50), unique=False, nullable=False)
+    city = db.Column(db.String(40), unique=False, nullable=False)
+    psc = db.Column(db.String(5), unique=False, nullable=False)
     phoneNumber = db.Column(db.String(13), unique=True, nullable=False)
 
     def __repr__(self):
@@ -14,8 +16,7 @@ class User(db.Model):
 
 class Author(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    firstName = db.Column(db.String(50), unique=False, nullable=False)
-    lastName = db.Column(db.String(50), unique=False, nullable=False)
+    name = db.Column(db.String(80), unique=False, nullable=False)
 
     def __repr__(self):
         return f"<Autor {self.firstName} {self.lastName} ({self.id})>"
